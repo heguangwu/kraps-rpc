@@ -10,10 +10,11 @@
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kraps-rpc-example_2.11</artifactId>
+    <artifactId>kraps-rpc-example</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>kraps-rpc-example</name>
+    <description>Example</description>
 
     <dependencies>
         <dependency>
@@ -68,23 +69,12 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.5.4</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>timezra.maven</groupId>
+                <artifactId>jacoco-scala-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
